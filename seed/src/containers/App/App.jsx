@@ -66,13 +66,13 @@ const ConnectedThemeComponent = ThemeComponent;
 const App = () => {
   return (
     <Provider store={store}>
-      <BrowserRouter basename="/dashboard">
+      <BrowserRouter basename="/easydev">
         <I18nextProvider i18n={i18n}>
-            <ConnectedThemeComponent>
-              <ScrollToTop>
-                <Router />
-              </ScrollToTop>
-            </ConnectedThemeComponent>
+          <ConnectedThemeComponent>
+            <ScrollToTop>
+              <Router />
+            </ScrollToTop>
+          </ConnectedThemeComponent>
         </I18nextProvider>
       </BrowserRouter>
     </Provider>
