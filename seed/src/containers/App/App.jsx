@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { ThemeProvider } from "styled-components";
 import { Provider, useSelector } from "react-redux";
@@ -10,7 +10,6 @@ import {
   createTheme,
   ThemeProvider as MuiThemeProvider,
 } from "@material-ui/core/styles";
-import initAuth0 from "@/shared/components/account/auth/withAuth0";
 import TimepickerStyles from "@/shared/components/form/date-pickers/timepickerStyles";
 import Router from "./Router";
 import store from "./store";
@@ -67,7 +66,7 @@ const ConnectedThemeComponent = ThemeComponent;
 const App = () => {
   return (
     <Provider store={store}>
-      <BrowserRouter basename="/admin">
+      <BrowserRouter basename="/dashboard">
         <I18nextProvider i18n={i18n}>
             <ConnectedThemeComponent>
               <ScrollToTop>
